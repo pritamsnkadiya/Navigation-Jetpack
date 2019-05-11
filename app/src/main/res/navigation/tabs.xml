@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tabs_nav_graph"
+    app:startDestination="@id/itemTabsFragment">
+
+    <fragment
+        android:id="@+id/itemTabsFragment"
+        android:name="com.example.pritamsankadiya.tabnavigation.ItemTabsFragment"
+        android:label="fragment_item_tabs"
+        tools:layout="@layout/fragment_item_tabs">
+
+        <action
+            android:id="@+id/action_itemTabsFragment_to_fragmentOne"
+            app:destination="@id/fragmentOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.example.pritamsankadiya.tabnavigation.FragmentOne"
+        android:label="fragment_fragment_one"
+        tools:layout="@layout/fragment_fragment_one">
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+        <action
+            android:id="@+id/action_fragmentOne_to_itemTabsFragment"
+            app:destination="@id/itemTabsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.example.pritamsankadiya.tabnavigation.FragmentTwo"
+        android:label="fragment_fragment_two"
+        tools:layout="@layout/fragment_fragment_two">
+        <action
+            android:id="@+id/action_fragmentTwo_to_fragmentOne"
+            app:destination="@id/fragmentOne" />
+    </fragment>
+</navigation>
